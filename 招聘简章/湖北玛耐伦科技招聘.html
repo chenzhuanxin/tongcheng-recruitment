@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>湖北玛耐伦科技有限公司 · 高薪诚聘</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f2748'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb020' font-family='sans-serif' font-weight='bold'>玛</text></svg>">
+<style>
+  :root{
+    --navy:#0f2748;
+    --navy-2:#163a63;
+    --teal:#0ea5b7;
+    --teal-soft:#e6f7f9;
+    --amber:#ff8a3d;
+    --amber-soft:#fff1e6;
+    --ink:#1d2b3a;
+    --muted:#64748b;
+    --line:#e6ebf1;
+    --bg:#f4f7fb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+  /* ===== Hero ===== */
+  .hero{
+    background:linear-gradient(135deg,#0f2748 0%,#163a63 55%,#0e5a78 100%);
+    color:#fff;padding:56px 20px 96px;position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;
+    border-radius:50%;background:radial-gradient(circle,rgba(255,176,32,.25),transparent 70%);
+  }
+  .hero::before{
+    content:"";position:absolute;left:-60px;bottom:-100px;width:280px;height:280px;
+    border-radius:50%;background:radial-gradient(circle,rgba(14,165,183,.3),transparent 70%);
+  }
+  .hero-inner{max-width:960px;margin:0 auto;position:relative;z-index:2}
+  .badge{
+    display:inline-block;background:rgba(255,176,32,.18);color:#ffd27a;
+    border:1px solid rgba(255,176,32,.4);padding:5px 14px;border-radius:999px;
+    font-size:13px;letter-spacing:2px;margin-bottom:18px;
+  }
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:1px;margin-bottom:6px}
+  .hero .sub{font-size:18px;color:#9fd6e0;letter-spacing:6px;margin-bottom:24px}
+  .hero p.brief{
+    max-width:760px;font-size:15px;color:#d6e4f0;line-height:1.9;
+    background:rgba(255,255,255,.06);padding:18px 20px;border-radius:12px;
+    border-left:3px solid var(--amber);
+  }
+  .hero-stats{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+  .stat{background:rgba(255,255,255,.1);border-radius:10px;padding:10px 18px;font-size:14px}
+  .stat b{display:block;font-size:20px;color:#ffd27a;font-weight:700}
+  /* ===== 联系条 ===== */
+  .contact-bar{
+    max-width:960px;margin:-52px auto 0;position:relative;z-index:5;padding:0 20px;
+  }
+  .contact-card{
+    background:linear-gradient(120deg,#ff8a3d,#ff6a1a);
+    border-radius:16px;box-shadow:0 14px 34px rgba(255,106,26,.35);
+    color:#fff;padding:20px 26px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between;
+  }
+  .contact-card .label{font-size:13px;opacity:.9;letter-spacing:1px}
+  .contact-card .who{font-size:16px;font-weight:600;margin-top:2px}
+  .contact-card .phone{
+    font-size:30px;font-weight:800;letter-spacing:1.5px;font-family:"DIN Alternate","PingFang SC",sans-serif;
+  }
+  .contact-card .phone small{font-size:13px;font-weight:400;opacity:.9;display:block;letter-spacing:0}
+  .contact-card a{
+    background:#fff;color:#ff6a1a;text-decoration:none;font-weight:700;
+    padding:12px 22px;border-radius:999px;font-size:15px;white-space:nowrap;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+  }
+  /* ===== 岗位区 ===== */
+  .section{max-width:960px;margin:0 auto;padding:40px 20px 120px}
+  .section-title{font-size:24px;font-weight:800;color:var(--navy);margin-bottom:4px;display:flex;align-items:center;gap:10px}
+  .section-title::before{content:"";width:5px;height:22px;background:var(--amber);border-radius:3px}
+  .section-desc{color:var(--muted);font-size:14px;margin-bottom:24px;padding-left:15px}
+  .job-list{display:flex;flex-direction:column;gap:16px}
+  .job{
+    background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 4px 16px rgba(15,39,72,.05);transition:box-shadow .25s,transform .25s;
+  }
+  .job:hover{box-shadow:0 10px 28px rgba(15,39,72,.12);transform:translateY(-2px)}
+  .job-head{
+    display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;padding:20px 22px;cursor:pointer;user-select:none;
+  }
+  .job-name{font-size:20px;font-weight:800;color:var(--navy);min-width:110px}
+  .tag{
+    font-size:13px;padding:4px 12px;border-radius:999px;font-weight:600;
+  }
+  .tag.num{background:var(--teal-soft);color:#0b7d8c}
+  .tag.edu{background:#eef2ff;color:#3f5bd4}
+  .tag.loc{background:#f1f5f9;color:#475569}
+  .salary{
+    margin-left:auto;font-size:19px;font-weight:800;color:var(--amber);font-family:"DIN Alternate",sans-serif;
+  }
+  .toggle{
+    display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--teal);
+    background:var(--teal-soft);padding:8px 16px;border-radius:999px;white-space:nowrap;
+    transition:background .2s;
+  }
+  .toggle:hover{background:#d3eef2}
+  .toggle .chev{display:inline-block;transition:transform .3s;font-size:12px}
+  .job.open .toggle{background:var(--amber-soft);color:#e2621a}
+  .job.open .toggle .chev{transform:rotate(180deg)}
+  .job-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .job.open .job-body{max-height:1200px}
+  .job-inner{padding:4px 22px 22px;border-top:1px dashed var(--line)}
+  .block{margin-top:16px}
+  .block h4{
+    font-size:14px;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:8px;
+  }
+  .block h4::before{content:"";width:8px;height:8px;background:var(--teal);border-radius:2px;transform:rotate(45deg)}
+  .block.req h4::before{background:var(--amber)}
+  .block p,.block li{font-size:14.5px;color:#334155;line-height:1.9}
+  .block ul{padding-left:20px}
+  .foot-note{
+    text-align:center;color:var(--muted);font-size:13px;margin-top:36px;line-height:1.9;
+  }
+  /* ===== 底部悬浮联系（移动端） ===== */
+  .float-call{
+    position:fixed;left:16px;right:16px;bottom:16px;z-index:50;
+    background:linear-gradient(120deg,#ff8a3d,#ff6a1a);color:#fff;
+    border-radius:14px;box-shadow:0 10px 30px rgba(255,106,26,.4);
+    display:flex;align-items:center;justify-content:space-between;padding:12px 16px;
+  }
+  .float-call .t{font-size:12px;opacity:.9}
+  .float-call .n{font-size:20px;font-weight:800;letter-spacing:1px}
+  .float-call a{
+    background:#fff;color:#ff6a1a;text-decoration:none;font-weight:700;padding:9px 18px;border-radius:999px;font-size:14px;
+  }
+  @media(min-width:760px){ .float-call{display:none} }
+  @media(max-width:600px){
+    .hero{padding:40px 18px 80px}
+    .hero h1{font-size:26px}
+    .salary{margin-left:0;width:100%}
+    .job-head{padding:16px}
+    .toggle{width:100%;justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="badge">HOT · 高薪诚聘</span>
+    <h1>湖北玛耐伦科技有限公司</h1>
+    <div class="sub">MA NAILUN · 2026 招聘季</div>
+    <p class="brief">
+      本公司是一家专注于锰锌铁氧体磁芯、镍锌铁氧体磁芯、非晶纳米晶磁芯材料、共模电感及无线充电磁片产品研发、生产、销售为一体的<strong style="color:#ffd27a">高新技术企业</strong>。公司成立于 2017 年，位于通城县经济开发区高新技术产业园，厂房占地面积 30 多亩，年销售额超 1 亿元。
+    </p>
+    <div class="hero-stats">
+      <div class="stat"><b>2017</b>成立年份</div>
+      <div class="stat"><b>30 亩+</b>厂房占地</div>
+      <div class="stat"><b>1 亿+</b>年销售额</div>
+      <div class="stat"><b>8 类岗位</b>火热招聘中</div>
+    </div>
+  </div>
+</header>
+
+<div class="contact-bar">
+  <div class="contact-card">
+    <div>
+      <div class="label">求职咨询 · 联系人</div>
+      <div class="who">吴女士（微信同号）</div>
+    </div>
+    <div class="phone">
+      <small>投递简历 / 电话咨询</small>
+      180-8626-2692
+    </div>
+    <a href="tel:18086262692">立即拨打</a>
+  </div>
+</div>
+
+<main class="section">
+  <div class="section-title">在招岗位</div>
+  <div class="section-desc">点击岗位卡片右侧「查看详情」可展开工作内容与岗位要求</div>
+
+  <div class="job-list" id="jobList"><!-- JS 渲染 --></div>
+
+  <div class="foot-note">
+    公司地址：湖北省咸宁市通城县经济开发区坪山高新技术产业孵化园<br>
+    工作地点：湖北通城 / 广东东莞沙田镇（详见各岗位说明）
+  </div>
+</main>
+
+<div class="float-call">
+  <div><div class="t">联系人 · 吴女士（微信同号）</div><div class="n">180-8626-2692</div></div>
+  <a href="tel:18086262692">拨打</a>
+</div>
+
+<script>
+const JOBS = [
+  {
+    name:"机修", num:"2 人", edu:"中专以上", loc:"通城", salary:"4500 - 6000 元",
+    work:"负责完成生产设备的维护保养，对设备进行定期检修、保养，排除隐患，确保设备正常使用，保障生产计划任务的顺利完成。",
+    req:[
+      "45 岁以下，限男性，中专以上学历，有机修工作 1 年以上经验；",
+      "人品端正，爱岗敬业，工作态度耐心细致，吃苦耐劳；",
+      "踏实诚信，执行力与主动性强，对数据敏感，能接受两班倒工作制。"
+    ]
+  },
+  {
+    name:"质检员", num:"1 人", edu:"中专以上", loc:"通城", salary:"3500 - 4500 元",
+    work:[
+      "生产过程巡回检查：核对工艺参数、作业方法、工装设备状态；",
+      "抽检在制品，检查外观、尺寸、关键特性，核对标识；",
+      "发现生产质量问题立即提醒现场，必要时叫停生产，上报部门主管；",
+      "记录巡检数据，跟踪不良整改，复核整改效果。"
+    ],
+    req:[
+      "40 岁以下，男女不限；",
+      "电脑办公软件熟练，会熟练使用测试工具、仪器等；",
+      "工作认真负责，沟通能力强，服从管理；",
+      "有一年以上相关工作经历。"
+    ]
+  },
+  {
+    name:"普工", num:"20 人", edu:"初中及以上", loc:"通城", salary:"计件高达 7000 元",
+    work:"按要求完成工作任务。",
+    req:[
+      "身体健康、品行好、能吃苦耐劳、配合度高，男女不限，年龄 45 岁以下；",
+      "实行两班倒工作制，能适应白 / 夜班倒班者；",
+      "实行计件制、多劳多得，工作轻松易学、产量高；",
+      "服从管理，无不良犯罪记录。"
+    ]
+  },
+  {
+    name:"业务员", num:"2 人", edu:"本科", loc:"东莞沙田镇", salary:"底薪 + 提成",
+    work:[
+      "负责公司产品的销售及推广；",
+      "出色完成公司下达的销售指标，撰写销售报告；",
+      "开拓新市场，发展新客户；",
+      "负责客户的开发和管理，负责新老客户的维护和拜访工作。"
+    ],
+    req:[
+      "20 - 40 岁以内，男女不限；",
+      "热爱销售工作，善于沟通，语言表达能力强，会开车；",
+      "具有良好的职业道德；",
+      "工作地点：东莞市沙田镇。"
+    ]
+  },
+  {
+    name:"会计", num:"2 人", edu:"大专以上", loc:"通城 / 东莞沙田", salary:"4000 - 6000 元",
+    work:[
+      "负责日常收支的管理和核对；",
+      "现金及银行日记账登记及管理工作；",
+      "根据原始凭证整理和登记，并及时传递原始单据，做到日清月结；",
+      "发票管理和开具，开票系统维护和管理；",
+      "固定资产和低值易耗品的登记和管理；",
+      "保存归档财务相关资料。"
+    ],
+    req:[
+      "40 岁以下，限女性；具备一定的会计理论专业知识，具有初级会计职称；",
+      "具有现金管理、银行票据方面知识，掌握现金和银行存款管理制度及财务开支标准；",
+      "熟练掌握填具发票、登记账簿、电脑操作等技术；",
+      "能正确处理全盘账务业务，确保日清月结、账账相符；",
+      "有高新技术工厂一年以上工作经验；工作地点：通城 / 东莞沙田镇各一名。"
+    ]
+  },
+  {
+    name:"业务跟单", num:"1 人", edu:"大专以上", loc:"东莞沙田镇", salary:"3500 - 5000 元",
+    work:[
+      "负责订单的跟进与管理，确保从下单到发货、售后全流程顺畅执行；",
+      "与客户保持良好沟通，及时反馈订单进度，处理客户疑问及异常情况；",
+      "协调生产、物流、仓储等部门，确保订单按时交付，提升客户满意度；",
+      "整理并维护客户订单档案，定期汇总订单数据，协助编制销售报表；",
+      "跟进货款回收情况，配合财务完成对账工作。"
+    ],
+    req:[
+      "40 岁以下，限女性；1 - 3 年相关工作经验，有外贸或跟单经验者优先；",
+      "熟练使用办公软件（Word、Excel），具备基本的数据处理能力；",
+      "工作细致认真，责任心强，具备良好的沟通协调能力和抗压能力；",
+      "能适应快节奏工作环境，具备团队合作精神；",
+      "无不良记录，能长期稳定发展；工作地：东莞沙田镇。"
+    ]
+  },
+  {
+    name:"采购文员", num:"1 人", edu:"大专以上", loc:"东莞沙田镇", salary:"3500 - 5500 元",
+    work:[
+      "负责采购订单的制作、下发、归档，跟进订单交期，跟踪物料到货情况；",
+      "整理送货单、入库单、发票、合同等资料，建立电子及纸质档案；",
+      "维护采购台账，统计物料到货、欠料数据，制作基础采购报表；",
+      "协助供应商月度对账，整理付款资料，对接财务完成付款申请；",
+      "对接仓库、生产部门，跟进物料入库、物料异常信息传递；",
+      "负责供应商基础沟通，通知送货、催收单据，完成采购部其他内勤工作。"
+    ],
+    req:[
+      "35 岁以下，男女不限；采购、行政、文秘类优先；",
+      "有采购文员、仓库文员、跟单文员经验优先，应届生可培养；",
+      "熟练使用 Office、Excel（VLOOKUP、数据透视、表格函数），会 ERP / 进销存系统（金蝶、用友、SAP 等）优先；",
+      "细心严谨，对数字敏感，单据核对不出错；有良好沟通能力，做事有计划性；",
+      "责任心强，执行力好，熟悉采购基础流程优先；工作地点：东莞市沙田镇。"
+    ]
+  },
+  {
+    name:"工程技术员", num:"2 人", edu:"大专以上", loc:"通城 / 东莞沙田", salary:"3500 - 6000 元",
+    work:[
+      "执行工艺、监控参数、保证产品合格，处理现场异常、分析原因、落实改善；",
+      "维护设备、点检校准、保障稳定运行，填写记录、统计数据、输出报表；",
+      "参与新工艺 / 新材料试验、优化方案；培训新员工、规范操作、提升技能。"
+    ],
+    req:[
+      "45 岁以下，男女不限；",
+      "有 1 年以上非晶、纳米晶软磁材料、磁芯、非晶变压器铁芯相关生产技术、工艺、质检工作经验者优先；",
+      "熟悉 EMC 滤波器、非晶纳米晶磁芯成品工艺及行业质量标准，具备工艺优化、降本提效实操经验者优先；",
+      "具备样品试制、性能调试、工艺改良经验者优先；",
+      "了解 ISO9001 质量管理体系，有车间工艺标准化搭建、量产问题闭环处理经验者优先；",
+      "优秀应届生、专业基础扎实、动手能力强，愿意长期深耕新材料工艺技术岗位可重点培养；",
+      "工作地点：通城 / 东莞市沙田镇。"
+    ]
+  }
+];
+
+function toList(item){
+  if(Array.isArray(item)) return '<ul>'+item.map(t=>`<li>${t}</li>`).join('')+'</ul>';
+  return `<p>${item}</p>`;
+}
+
+document.getElementById('jobList').innerHTML = JOBS.map((j,i)=>`
+  <div class="job" id="job${i}">
+    <div class="job-head" onclick="toggleJob(${i})">
+      <div class="job-name">${j.name}</div>
+      <span class="tag num">招 ${j.num}</span>
+      <span class="tag edu">${j.edu}</span>
+      <span class="tag loc">${j.loc}</span>
+      <div class="salary">${j.salary}</div>
+      <span class="toggle">查看岗位详情 <span class="chev">▼</span></span>
+    </div>
+    <div class="job-body">
+      <div class="job-inner">
+        <div class="block">
+          <h4>工作内容</h4>
+          ${toList(j.work)}
+        </div>
+        <div class="block req">
+          <h4>岗位要求</h4>
+          ${toList(j.req)}
+        </div>
+      </div>
+    </div>
+  </div>
+`).join('');
+
+function toggleJob(i){
+  document.getElementById('job'+i).classList.toggle('open');
+}
+</script>
+</body>
+</html>
